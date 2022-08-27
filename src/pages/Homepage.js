@@ -12,27 +12,54 @@ export default function Homepage(){
         <StyledImageContainer>
         <StyledPicture src={mypicture} alt='Isabell Paulmann'/>
         </StyledImageContainer>
+        <StyledSection>
+            <button>Webentwicklerin Frontend</button>
+            <button>Hobbyfotografin</button>
+            <button>Kunst & Design</button>
+          
+        </StyledSection>
         </main>
         <Footer/>
         </>
     )
 }
+const StyledSection = styled.section`
+display:flex;
+justify-content:center;
+text-align:center;
+align-items: center;
+flex-direction: column;
+
+button {
+    color:white;
+    width: 250px;
+    font-family: inherit;
+    font-size: 1.05rem;
+    margin: 10px;
+    padding: 10px;
+    border:none;
+    font-weight: 400;
+    border-radius: 10px;
+    background-color: #733131;
+    transition: transform 0.35s ease-in-out;
+    transition-property: background, color, transform;
+    cursor:pointer;
+&:hover{
+    background: white;
+    color:black;
+    transform:scale(1.05)
+    }}`
 
 const fadeIn = keyframes`from {opacity:0
 }
 to { opacity:1; }
 `;
 
-
-
 const StyledImageContainer = styled.div`
 display: flex;
 justify-content: center;
 margin: 50px
-
 `
-
-
 const StyledPicture = styled.img`
 max-width: 220px;
 height:auto;
